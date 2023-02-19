@@ -1,0 +1,19 @@
+.elements__icon-like {
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    border: none;
+}
+
+.elements__icon-like:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.elements__icon-like::before {
+    content: url('../../../images/icon-like.jpg');
+}
+
+.elements__icon-like:focus::before {
+    content: url('../../../images/icon-like-active.jpg');
+}
