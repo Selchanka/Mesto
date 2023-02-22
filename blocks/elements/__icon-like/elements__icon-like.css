@@ -1,0 +1,17 @@
+.elements__icon-like {
+    padding: 0;
+    width: 22px;
+    height: 19px;
+    border: none;
+    background-image: url('../../../images/icon-like.svg');
+    background-color: transparent;
+}
+
+.elements__icon-like:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.elements__icon-like:focus::before{
+    content: url('../../../images/icon-like-active.svg');
+}
