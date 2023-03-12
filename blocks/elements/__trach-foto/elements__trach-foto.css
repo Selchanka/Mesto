@@ -1,0 +1,16 @@
+.elements__trach-foto {
+    padding: 0;
+    width: 18px;
+    height: 19px;
+    border: none;
+    background-image: url('../../../images/trach.svg');
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.elements__trach-foto:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

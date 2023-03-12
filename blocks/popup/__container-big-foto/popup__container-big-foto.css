@@ -1,0 +1,15 @@
+.popup__container-big-foto {
+    max-width: 75vw;
+    height: 75vh;
+    display: flex;  
+    position: relative;  
+}
+
+
+@media all and (width <=700px) {
+    .popup__container-big-foto {
+        width: 75vw;
+        max-height: 75vh;
+    }
+}
+

@@ -1,0 +1,14 @@
+.footer { 
+  margin: auto;
+  width: 100%;
+  padding-top: 67px;
+  padding-bottom: 60px; 
+  flex-shrink: 0;
+  box-sizing: border-box; 
+}
+
+@media all and (width < 425px) {
+  .footer {
+    padding: 48px 19px 36px 19px;
+  }
+}
