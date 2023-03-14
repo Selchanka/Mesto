@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Места России. Отдых. Красивые локации.">
+  <title>Mesto</title>
+  <!--  Подключенные файлы  -->
+  <link rel="stylesheet" href="./pages/index.css" />
+</head>
+
+<body class="page">
+
+  <!-- ---------------  Блок header (шапка страницы) ------------------- -->
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="проект << Mesto Russia >>" />
+  </header>
+
+  <main class="content">
+    <!-- ---------------  Блок profile --------------------- -->
+    <section class="profile">
+      <img class="profile__avatar" src="./images/portret.jpg" alt="Аватарка" />
+      <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__profession">Исследователь океана</p>
+      </div>
+      <button type="button" aria-label="Редактировать"
+        class="profile__button-edit profile__button-edit-action"></button>
+      <button type="button" aria-label="Добавить" class="profile__button-add profile__button-add-action"></button>
+    </section>
+    <!-- ---------------  Блок elements --------------------- -->
+    <section>
+      <ul class="elements"></ul>
+    </section>
+  </main>
+  <!-- ---------------  Блок footer --------------------- -->
+  <footer class="footer">
+    <p class="footer__text">© 2020 Mesto Russia</p>
+  </footer>
+
+  <!-- ---------------  Блоки popup --------------------- -->
+
+  <div class="popup" id="form-edit">
+    <div class="popup__container">
+      <button type="button" class="popup__close" aria-label="Закрыть"><img class="popup__close-icon"
+          src="./images/close-icon.svg" alt="Закрыть" /></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="form-edit" id="popup-save-fio-profession">
+        <fieldset class="popup__inputs">
+          <input type="text" name="fio" id="popup-input-fio" class="popup__input" value="Жак-Ив Кусто"
+            placeholder="Имя" autocomplete="off" required>
+          <input type="text" name="profession" id="popup-input-profession" class="popup__input"
+            value="Исследователь океана" placeholder="Род деятельности, увлечения" autocomplete="off" required>
+        </fieldset>
+        <button type="submit" class="popup__save" aria-label="Сохранить">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup" id="form-add">
+    <div class="popup__container">
+      <button type="button" class="popup__close" aria-label="Закрыть"><img class="popup__close-icon"
+          src="./images/close-icon.svg" alt="Закрыть" /></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="form-edit" id="popup-save-image">
+        <fieldset class="popup__inputs">
+          <input type="text" name="image-name" id="popup-input-image-name" class="popup__input" 
+            placeholder="Название" autocomplete="off" required>
+          <input type="url" name="link" id="popup-input-image-link" class="popup__input"
+            placeholder="Ссылка на картинку" autocomplete="off" required>
+        </fieldset>
+        <button type="submit" class="popup__save" aria-label="Создать">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_dark" id="form-big-foto">
+    <div class="popup__container-big-foto">
+      <button type="button" class="popup__close" aria-label="Закрыть"><img class="popup__close-icon"
+          src="./images/close-icon.svg" alt="Закрыть" /></button>
+      <h3 class="popup__title-big-foto"></h3>
+      <img class="popup__big-foto" />
+    </div>
+  </div>
+
+  <!-- ---------------  Блок template --------------------- -->
+
+  <template id="element-foto-info">
+    <li class="elements__element">
+      <img class="elements__foto" />
+      <div class="elements__trach-foto"></div>
+      <div class="elements__info">
+        <h2 class="elements__name"></h2>
+        <button class="elements__icon-like" type="button" aria-label="Отметить, что нравится"></button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/index.js"></script>
+
+</body>
+</html>
